@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row row-margin">
+    <div class="col-md-3">
+      <app-dashboard></app-dashboard>
+    </div>
+    <div class="col-md-9">
+      <div class="col-md-6 offset-md-3 card">
+        <div class="text-center margin">
+          <form role="form" [formGroup]="updateForm">
+            <div class="form-group">
+              <h1><span class="fa fa-user"></span></h1>
+              <h3 class="contact-margin">Contact Details</h3>
+              <input type="text" class="form-control name" formControlName="name" disabled>
+              <input type="text" class="form-control email" formControlName="email" disabled>
+              <div class="bg"> Mobile Number </div>
+              <input type="text" class="form-control phone" formControlName="mobile" disabled>
+              <div class="bg"> Office Number </div>
+              <input type="text" class="form-control phone" formControlName="work" disabled>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

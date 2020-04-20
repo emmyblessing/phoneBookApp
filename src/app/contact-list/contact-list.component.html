@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row row-margin">
+    <div class="col-md-3">
+      <app-dashboard></app-dashboard>
+    </div>
+    <div class="col-md-9">
+      <h4><em class="fa fa-list-alt"></em> CONTACT LIST</h4>
+      <table class="table table-condensed table-hover table-stripped">
+        <caption><em>Table to display list of your contacts</em></caption>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col" colspan="3" class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contact of contacts">
+            <td>{{contact.name}}</td>
+            <td>{{contact.mobile}}</td>
+            <td><a (click)="viewContact(contact._id)" class="btn text-primary"><span class="fa fa-eye"></span></a></td>
+            <td><a (click)="editContact(contact._id)" class="btn text-primary"><span class="fa fa-edit"></span></a></td>
+            <td><a class="btn text-danger" (click)="deleteContact(contact._id)"><span class="fa fa-trash"></span></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
